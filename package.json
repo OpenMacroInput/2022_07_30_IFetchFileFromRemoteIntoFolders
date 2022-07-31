@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.omi.fetchfilefromremoteintofolders",                              
+  "displayName": "IFetchFileFromRemoteIntoFolders",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Sometime you need to fetch files remotely and store them locally to access them later. This package help you to do that.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
