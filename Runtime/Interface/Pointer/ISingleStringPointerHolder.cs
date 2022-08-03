@@ -18,7 +18,7 @@ public interface IFileDownloadCallbackGet
     public void GetPathUsed(out string pathUsed);
     public void GetTextDownloaded(out string fileDownload);
     public bool HasError();
-    public void GetCount(out int errorCount);
+    public void GetErrorCount(out int errorCount);
     public void GetErrorsStack(out IEnumerable<string> errorsStack);
 }
 public interface IFileDownloadCallbackSet
@@ -57,7 +57,7 @@ public class FileDownloadCallback : IFileDownloadCallbackGet, IFileDownloadCallb
 public void AddErrorsFound(params string [] errors) { m_errorsThatHappened.AddRange(errors);}
     
 
-    public void GetCount(out int errorCount) { errorCount = m_errorsThatHappened.Count;}
+    public void GetErrorCount(out int errorCount) { errorCount = m_errorsThatHappened.Count;}
     
 
     public void GetErrorsStack(out IEnumerable<string> errorsStack) { errorsStack = m_errorsThatHappened;}

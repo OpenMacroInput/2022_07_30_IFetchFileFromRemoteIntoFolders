@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &369876991
+--- !u!1 &56988690
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,27 +131,106 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 369876992}
+  - component: {fileID: 56988692}
+  - component: {fileID: 56988691}
   m_Layer: 0
-  m_Name: Download From Web
+  m_Name: TDD 2022_08_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &369876992
+--- !u!114 &56988691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56988690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b8abb87700d9741b3dc729b3261a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pointerToGithubPointerUrl: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/.relativefilespointer
+  m_whereToStoreOnDisk: G:\OMI\Q\OMI I Read Files\Assets\TestZone\GithubCopy
+  m_infoRaw:
+    m_gitUrl: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/.relativefilespointer
+    m_project: 2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
+    m_account: OpenMacroInput
+    m_fileExtension: .relativefilespointer
+    m_relativePath: .relativefilespointer
+    m_branch: main
+  m_infoClassic:
+    m_gitUrl: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/.relativefilespointer
+    m_project: 2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
+    m_account: OpenMacroInput
+    m_fileExtension: .relativefilespointer
+    m_relativePath: .relativefilespointer
+    m_branch: main
+    m_treeType: blob
+  m_githubPointerUrlRaw: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_pointerToGithubPointerUrlWebLink:
+    m_toUsePath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+    m_toUseRootPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main
+  m_pointerInfoAsText: '.relativefilespointer
+
+    README.md
+
+    DirectoryConstructor\.directoryconstructor
+
+    FilePointA\09.md
+
+    FilePointA\Az.md
+
+    FilePointA\FilePointer.relativefilepointers
+
+    FilePointA\ReadMe.md
+
+    GithubPointer\.urlrelativefilepointers
+
+    GithubPointer\DownloadMe.md
+
+    GithubPointer\LookAtMeGo.md
+
+'
+  m_relativePathsInPointer:
+  - .relativefilespointer
+  - README.md
+  - DirectoryConstructor\.directoryconstructor
+  - FilePointA\09.md
+  - FilePointA\Az.md
+  - FilePointA\FilePointer.relativefilepointers
+  - FilePointA\ReadMe.md
+  - GithubPointer\.urlrelativefilepointers
+  - GithubPointer\DownloadMe.md
+  - GithubPointer\LookAtMeGo.md
+  - 
+  m_absolutePathsInPointer:
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/README.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/DirectoryConstructor\.directoryconstructor
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\09.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\Az.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\FilePointer.relativefilepointers
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\ReadMe.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\.urlrelativefilepointers
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\DownloadMe.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\LookAtMeGo.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/
+--- !u!4 &56988692
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369876991}
+  m_GameObject: {fileID: 56988690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &965690868
 GameObject:
@@ -162,10 +241,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965690869}
-  - component: {fileID: 965690871}
   - component: {fileID: 965690870}
   m_Layer: 0
-  m_Name: Download One File from web
+  m_Name: Github
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &965690870
 MonoBehaviour:
@@ -225,19 +303,76 @@ MonoBehaviour:
     m_gitUrl: git@github.com:OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField.git
     m_project: 2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
     m_account: OpenMacroInput
---- !u!114 &965690871
+--- !u!1 &1174837679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174837681}
+  - component: {fileID: 1174837680}
+  m_Layer: 0
+  m_Name: Pointer Constructor Demo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1174837680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965690868}
+  m_GameObject: {fileID: 1174837679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921695a49b6a20246ab6d3fd0dc118fb, type: 3}
+  m_Script: {fileID: 11500000, guid: a49d07402ca87f549a2cd3477b7a1964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1251767576
+  m_directoryPath: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA
+  m_defaultFileName: 
+  m_buildLog:
+    m_fileName: 
+    m_rootDirectory: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA
+    m_absoluteFiles:
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\.relativefilespointer
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\09.md
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\Az.md
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\ReadMe.md
+    m_relativeFiles:
+    - .relativefilespointer
+    - 09.md
+    - Az.md
+    - ReadMe.md
+    m_resultFileText: '.relativefilespointer
+
+      09.md
+
+      Az.md
+
+      ReadMe.md
+
+'
+    m_resultPathToCreate: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA/.relativefilespointer
+  m_ignoreGit: 1
+--- !u!4 &1174837681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174837679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1423182811
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,100 +380,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1251767577}
+  - component: {fileID: 1423182814}
+  - component: {fileID: 1423182813}
+  - component: {fileID: 1423182812}
   m_Layer: 0
-  m_Name: Download From GitHub
+  m_Name: JustDownloadDemo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1251767577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251767576}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1284078918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1284078919}
-  - component: {fileID: 1284078920}
-  m_Layer: 0
-  m_Name: Download One File from github
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1284078919
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284078918}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1284078920
+--- !u!114 &1423182812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284078918}
+  m_GameObject: {fileID: 1423182811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7166d922fb0466a499051dfcb8be3f6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8120051eaf89ba34bb40b83b8d5fa00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1300110322
-GameObject:
+  m_target: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_directory: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFormWebWithIdFolder
+  m_succedToDownload: 0
+--- !u!114 &1423182813
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1300110323}
-  m_Layer: 0
-  m_Name: Download Directories Constructor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1300110323
+  m_GameObject: {fileID: 1423182811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5e286b71fb4b34397d984f05935b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: 
+  m_directory: 
+  m_succedToDownload: 0
+--- !u!4 &1423182814
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300110322}
+  m_GameObject: {fileID: 1423182811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426076876
 GameObject:
@@ -351,7 +445,7 @@ GameObject:
   - component: {fileID: 1426076878}
   - component: {fileID: 1426076877}
   m_Layer: 0
-  m_Name: TDD 2022_01_08
+  m_Name: TDD 2022_08_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +473,19 @@ MonoBehaviour:
     m_givenPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/.urlrelativefilepointers
   m_urlRelativeFilePointer:
     m_usedPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/.urlrelativefilepointers
-    m_textDownload: 
+    m_textDownload: '// Must have a http(s):// to be valide.
+
+      // If ther is
+      not : before the http it is consider a copy the file to the root with guest
+      file named.
+
+      GitHub/DownloadMe_RawFile.md:https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/DownloadMe.md
+
+      GitHub/DownloadMe_Default.md:https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/new/main/GithubPointer/DownloadMe.md
+
+      https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/GithubPointer/LookAtMeGo.md
+
+'
     m_errorsThatHappened: []
   m_relativeFilePointerUrl:
     m_givenPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA/FilePointer.relativefilepointers
@@ -407,3 +513,198 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1883118367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883118370}
+  - component: {fileID: 1883118369}
+  - component: {fileID: 1883118368}
+  m_Layer: 0
+  m_Name: TDD 2022_08_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1883118368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883118367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd882612575ef6f45b4fc434842cf337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_targetPointerPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_whereToStoreOnDisk: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFromDirectoryFilePointer
+  m_flushFolderOnDiskBeforeDownloading: 1
+  m_pathDownloader:
+    m_targetPointerPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+    m_whereToStoreOnDisk: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFromDirectoryFilePointer
+    m_flushFolderOnDiskBeforeDownloading: 1
+    m_pointerUsed:
+      m_toUsePath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+      m_toUseRootPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main
+    m_callback:
+      m_usedPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+      m_textDownload: 
+      m_errorsThatHappened:
+      - "  at System.Net.HttpWebRequest+<GetResponseFromData>d__240.MoveNext () [0x00152]
+        in <0463b2ef957545c0a51b42f372cd4fbb>:0 \r\n--- End of stack trace from previous
+        location where exception was thrown ---\r\n  at System.Net.WebClient.DownloadDataInternal
+        (System.Uri address, System.Net.WebRequest& request) [0x00072] in <0463b2ef957545c0a51b42f372cd4fbb>:0
+        \r\n  at System.Net.WebClient.DownloadString (System.Uri address) [0x00020]
+        in <0463b2ef957545c0a51b42f372cd4fbb>:0 \r\n  at System.Net.WebClient.DownloadString
+        (System.String address) [0x00016] in <0463b2ef957545c0a51b42f372cd4fbb>:0
+        \r\n  at (wrapper remoting-invoke-with-check) System.Net.WebClient.DownloadString(string)\r\n 
+        at RemoteAccessUtility.DownloadFileAsText_CSharpClassic (ISingleStringPointerHolder&
+        source, IFileDownloadCallbackSet& callback) [0x0003b] in G:\\OMI\\Q\\OMI
+        I Read Files\\Assets\\2022_07_30_IFetchFileFromRemoteIntoFolders\\Runtime\\Utility\\RemoteAccessUtility.cs:100 "
+    m_pointerRecovered: 0
+    m_pointerAsTextRecovered: 
+    m_webRoot: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/
+    m_localRoot: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFromDirectoryFilePointer/
+    m_relativePathsInPointer: []
+    m_absolutePathsFromGivenRoot: []
+    m_absolutePathsStored: []
+--- !u!114 &1883118369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883118367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f895213e5090a34cbba590ed9544145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pointerToPointerUrl: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_whereToStoreOnDisk: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFromWebFilePointer
+  m_pointerToPointerUrlWebLink:
+    m_toUsePath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+    m_toUseRootPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main
+  m_pointerInfoAsText: '.relativefilespointer
+
+    README.md
+
+    DirectoryConstructor\.directoryconstructor
+
+    FilePointA\09.md
+
+    FilePointA\Az.md
+
+    FilePointA\FilePointer.relativefilepointers
+
+    FilePointA\ReadMe.md
+
+    GithubPointer\.urlrelativefilepointers
+
+    GithubPointer\DownloadMe.md
+
+    GithubPointer\LookAtMeGo.md
+
+'
+  m_relativePathsInPointer:
+  - .relativefilespointer
+  - README.md
+  - DirectoryConstructor\.directoryconstructor
+  - FilePointA\09.md
+  - FilePointA\Az.md
+  - FilePointA\FilePointer.relativefilepointers
+  - FilePointA\ReadMe.md
+  - GithubPointer\.urlrelativefilepointers
+  - GithubPointer\DownloadMe.md
+  - GithubPointer\LookAtMeGo.md
+  - 
+  m_absolutePathsInPointer:
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/README.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/DirectoryConstructor\.directoryconstructor
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\09.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\Az.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\FilePointer.relativefilepointers
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/FilePointA\ReadMe.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\.urlrelativefilepointers
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\DownloadMe.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer\LookAtMeGo.md
+  - https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/
+--- !u!4 &1883118370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883118367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2261071344160927399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2261071342778998441, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_Name
+      value: FetchFileFromRemoteIntoFolders
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261071342778998455, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 629deca7449981f46bbf2b09adccd65f, type: 3}
