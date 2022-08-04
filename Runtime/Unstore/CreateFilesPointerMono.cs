@@ -17,7 +17,6 @@ public class CreateFilesPointerMono : MonoBehaviour
         FilesPointerBuilderUtility.Create(in m_directoryPath, m_defaultFileName, out m_buildLog, in m_ignoreGit);
     }
 }
-
 public class FilesPointerBuilderUtility {
 
 
@@ -33,6 +32,7 @@ public class FilesPointerBuilderUtility {
         builder.m_rootDirectory = rootDirectory;
         builder.m_fileName = fileNameNoExtension;
         builder.m_absoluteFiles= Directory.GetFiles(rootDirectory, "*", SearchOption.AllDirectories);
+        builder.m_absoluteDirectory = Directory.GetDirectories(rootDirectory, "*", SearchOption.AllDirectories);
         if (ignoreGit) { 
             builder.m_absoluteFiles=
                 builder.m_absoluteFiles.Where(
@@ -41,11 +41,17 @@ public class FilesPointerBuilderUtility {
                 .ToArray();
         }
         builder.m_relativeFiles = new string[builder.m_absoluteFiles.Length];
+        builder.m_relativeDirectory = new string[builder.m_absoluteDirectory.Length];
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < builder.m_absoluteFiles.Length; i++)
         {
             builder.m_relativeFiles[i] = RemoteAccessStringUtility.RemoveSlashAtStart(builder.m_absoluteFiles[i].Replace(rootDirectory, ""));
             sb.AppendLine(builder.m_relativeFiles[i]);
+        }
+        for (int i = 0; i < builder.m_absoluteDirectory.Length; i++)
+        {
+            builder.m_relativeDirectory[i] = RemoteAccessStringUtility.RemoveSlashAtStart(builder.m_absoluteDirectory[i].Replace(rootDirectory, ""));
+            sb.AppendLine(builder.m_relativeDirectory[i]);
         }
 
         builder.m_resultPathToCreate = pointerPath;
@@ -64,5 +70,9 @@ public class FilesPointerBuildLog
     public string[] m_relativeFiles;
     public string m_resultFileText;
     public string m_resultPathToCreate;
+
+
+    public string[] m_absoluteDirectory;
+    public string[] m_relativeDirectory;
 
 }

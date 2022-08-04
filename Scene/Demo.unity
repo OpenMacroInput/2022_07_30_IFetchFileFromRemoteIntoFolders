@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8120051eaf89ba34bb40b83b8d5fa00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: https://raw.githubusercontent.com/OpenMacroInput/2022_07_0_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_target: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
   m_directory: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFormWebWithIdFolder
   m_succedToDownload: 0
 --- !u!114 &1423182813
@@ -417,8 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5e286b71fb4b34397d984f05935b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: 
-  m_directory: 
+  m_target: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_directory: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFormJustDownload
   m_succedToDownload: 0
 --- !u!4 &1423182814
 Transform:
