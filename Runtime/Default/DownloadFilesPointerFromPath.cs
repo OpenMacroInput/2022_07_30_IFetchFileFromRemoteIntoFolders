@@ -5,6 +5,28 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
+[System.Serializable]
+public class DownloadFilesPointerFromPathAndGithub : DownloadFilesPointerFromPath
+{
+    public DownloadFilesPointerFromPathAndGithub(in string targetPointerPath, in string whereToStoreOnDisk, in bool flushFolderOnDiskBeforeDownloading) : base(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading)
+    {
+        this.Set(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading);
+    }
+
+    public override void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
+    {
+        string newTarget = pointerPath;
+        Debug.Log("D:" + newTarget);
+        if (GitHubRemoteUtility.IsGitHubRelated(in newTarget)) {
+            if (RemoteAccessStringUtility.IsDirectoryPath(in newTarget))
+                newTarget = RemoteAccessStringUtility.RemoveSlashAtEnd(pointerPath) + "/.relativefilespointer";
+            GitHubRemoteUtility.GetRawGitPathFromGitLink(in newTarget, out newTarget);
+        }
+        Debug.Log("i:" + newTarget);
+        base.Set(newTarget, whereToStoreOnDiskPath, in deleteFolderBeforeDownload);
+    }
+
+}
 
 [System.Serializable]
 public class DownloadFilesPointerFromPath
@@ -32,7 +54,7 @@ public class DownloadFilesPointerFromPath
         m_whereToStoreOnDisk = whereToStoreOnDisk;
         m_flushFolderOnDiskBeforeDownloading = flushFolderOnDiskBeforeDownloading;
     }
-    public void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
+    public virtual void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
     {
         m_targetPointerPath = pointerPath;
         m_whereToStoreOnDisk = whereToStoreOnDiskPath;
@@ -56,7 +78,11 @@ public class DownloadFilesPointerFromPath
     public void ProcessToDownload()
     {
         Clear();
-        m_pointerUsed = new DiskFilesPointer(m_targetPointerPath);
+        Debug.Log("K:" + m_targetPointerPath);
+        if (RemoteAccessStringUtility.IsDirectoryPath(in m_targetPointerPath)) {
+            m_targetPointerPath = m_targetPointerPath + "/.relativefilespointer";
+        }
+        m_pointerUsed = new PathToFilesPointer(m_targetPointerPath);
         m_callback = new FileDownloadCallback();
         RemoteAccessUtility.DownloadFileAsText_CSharpClassic(
             new SingleStringPointerHolderStruct(m_pointerUsed.m_toUsePath), m_callback);

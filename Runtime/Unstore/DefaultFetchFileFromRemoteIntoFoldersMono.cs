@@ -6,7 +6,7 @@ public class DefaultFetchFileFromRemoteIntoFoldersMono : MonoBehaviour, IFetchFi
 {
 
     public bool m_autoAddToStaticAccess=true;
-    public DownloadFilesPointerFromPath m_last;
+    public DownloadFilesPointerFromPathAndGithub m_last;
     public void Awake()
     {
         if (m_autoAddToStaticAccess) { 
@@ -19,7 +19,7 @@ public class DefaultFetchFileFromRemoteIntoFoldersMono : MonoBehaviour, IFetchFi
         string target = whereToFetchTheFilePath;
         if(GitHubRemoteUtility.IsGitHubRelated(in whereToFetchTheFilePath))
             GitHubRemoteUtility.GetRawGitPathFromGitLink(in whereToFetchTheFilePath, out target);
-        DownloadFilesPointerFromPath p = new DownloadFilesPointerFromPath(target, directoryWhereToDownload, flushType == IFetchFileFromRemoteIntoFolders.FetchFileFlushManagement.DeleteAllDirectoryAndReload);
+        DownloadFilesPointerFromPathAndGithub p = new DownloadFilesPointerFromPathAndGithub(target, directoryWhereToDownload, flushType == IFetchFileFromRemoteIntoFolders.FetchFileFlushManagement.DeleteAllDirectoryAndReload);
         p.ProcessToDownload();
         succedWithoutError = p.HasDownloadSuccessfully();
         m_last = p;

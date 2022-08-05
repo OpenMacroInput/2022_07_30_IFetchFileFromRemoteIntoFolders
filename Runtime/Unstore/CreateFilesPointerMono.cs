@@ -18,7 +18,7 @@ public class CreateFilesPointerMono : MonoBehaviour
         FilesPointerBuilderUtility.Create(in m_directoryPath, m_defaultFileName, in m_ignoreFilter, out m_buildLog);
     }
 
-    [ContextMenu("Set Loash and swithc to slash")]
+    [ContextMenu("Set Load and switch to slash")]
     public void ToLowerAndSlash()
     {
         m_ignoreFilter.SetArrayToLowerAndReplaceBackSlash();

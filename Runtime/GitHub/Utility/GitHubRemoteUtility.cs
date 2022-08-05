@@ -159,7 +159,9 @@ public class GitHubRemoteUtility
         {
 
             ClassicGitUrlInfo m_classicGitUrl = new ClassicGitUrlInfo(path);
+            Debug.Log("N:" + path);
             GitHubRemoteUtility.CreateRawGitLink(m_classicGitUrl, out rawPath);
+            Debug.Log("NN:" + rawPath);
         }
         else rawPath = "";
     }
@@ -195,6 +197,8 @@ public class GitHubRemoteUtility
             rawPath = "";
             return;
         }
+        classicGitUrl.GetUsedUrl(out string url);
+        Debug.Log("p:" + url);
         classicGitUrl.GetAccount(out string acount);
         classicGitUrl.GetProjectName(out string project);
         classicGitUrl.GetBranch(out string branch);
@@ -211,6 +215,8 @@ public class GitHubRemoteUtility
         // https://raw.githubusercontent.com/0/1/2/3
         rawPath = string.Format("https://raw.githubusercontent.com/{0}/{1}/{2}/{3}",
             account, project, branch, relativePath);
+
+        Debug.Log("rp:" + rawPath);
     }
 
     public static void CreateCloneGitLink(in string path, out string raw)

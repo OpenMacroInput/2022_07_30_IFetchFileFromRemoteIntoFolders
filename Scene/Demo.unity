@@ -332,48 +332,257 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d07402ca87f549a2cd3477b7a1964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_directoryPath: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA
+  m_directoryPath: G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders
   m_defaultFileName: 
   m_buildLog:
     m_fileName: 
-    m_rootDirectory: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA
+    m_rootDirectory: G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders
     m_absoluteFiles:
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\.relativefilespointer
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\09.md
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\Az.md
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\ReadMe.md
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\.relativefilespointer
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Default\DownloadFilesPointerFromPath.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Exp_DownloadFileGithub.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Interface\IClassicGitUrlInfoGet.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Interface\IHttpCloneGitUrlInfoGet.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Interface\IRawAccessGitUrlInfoGet.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Interface\IShhCloneGitUrlInfoGet.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Utility\GitHubRemoteUtility.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\IFetchFileFromRemoteIntoFolders.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\ISleepy.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\File
+      To Point At\IDirectoriesConstructorFile.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\File
+      To Point At\IRelativeFilePointers.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\File
+      To Point At\IUrlFileDirectPointer.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\File
+      To Point At\IUrlRelativeFilePointers.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\Pointer\ISingleStringPointerHolder.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\CreateFilesPointerMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\DefaultFetchFileFromRemoteIntoFoldersMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\Exp_DirectoriesConstructor.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\Exp_Urlrelativefilepointers.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\FetchFilesFromPointer_InHashIdFolder.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\FetchFilesFromPointer_JustDownload.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\RemotePathUtility.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\Beans\IBean.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\ManagerRemoteFileFetcherMono\DefaultRemoteFileFetcherMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\ManagerRemoteFileFetcherMono\GitHubRemoteFileFetcherMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\ManagerRemoteFileFetcherMono\LocalFileRemoteFileFetcherMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\ManagerRemoteFileFetcherMono\ManagerRemoteFileFetcherMono.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\TDD\TDD_2022_01_08.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\TDD\TDD_2022_08_02.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\TDD\TDD_2022_08_03_FilePage.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\TDD\TDD_2022_08_03_WebPage.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Utility\RemoteAccessStringUtility.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Utility\RemoteAccessUtility.cs
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Scene\Demo.unity
     m_relativeFiles:
     - .relativefilespointer
-    - 09.md
-    - Az.md
-    - ReadMe.md
+    - Runtime\Default\DownloadFilesPointerFromPath.cs
+    - Runtime\GitHub\Exp_DownloadFileGithub.cs
+    - Runtime\GitHub\Interface\IClassicGitUrlInfoGet.cs
+    - Runtime\GitHub\Interface\IHttpCloneGitUrlInfoGet.cs
+    - Runtime\GitHub\Interface\IRawAccessGitUrlInfoGet.cs
+    - Runtime\GitHub\Interface\IShhCloneGitUrlInfoGet.cs
+    - Runtime\GitHub\Utility\GitHubRemoteUtility.cs
+    - Runtime\Interface\IFetchFileFromRemoteIntoFolders.cs
+    - Runtime\Interface\ISleepy.cs
+    - Runtime\Interface\File To Point At\IDirectoriesConstructorFile.cs
+    - Runtime\Interface\File To Point At\IRelativeFilePointers.cs
+    - Runtime\Interface\File To Point At\IUrlFileDirectPointer.cs
+    - Runtime\Interface\File To Point At\IUrlRelativeFilePointers.cs
+    - Runtime\Interface\Pointer\ISingleStringPointerHolder.cs
+    - Runtime\Unstore\CreateFilesPointerMono.cs
+    - Runtime\Unstore\DefaultFetchFileFromRemoteIntoFoldersMono.cs
+    - Runtime\Unstore\Exp_DirectoriesConstructor.cs
+    - Runtime\Unstore\Exp_Urlrelativefilepointers.cs
+    - Runtime\Unstore\FetchFilesFromPointer_InHashIdFolder.cs
+    - Runtime\Unstore\FetchFilesFromPointer_JustDownload.cs
+    - Runtime\Unstore\RemotePathUtility.cs
+    - Runtime\Unstore\Beans\IBean.cs
+    - Runtime\Unstore\ManagerRemoteFileFetcherMono\DefaultRemoteFileFetcherMono.cs
+    - Runtime\Unstore\ManagerRemoteFileFetcherMono\GitHubRemoteFileFetcherMono.cs
+    - Runtime\Unstore\ManagerRemoteFileFetcherMono\LocalFileRemoteFileFetcherMono.cs
+    - Runtime\Unstore\ManagerRemoteFileFetcherMono\ManagerRemoteFileFetcherMono.cs
+    - Runtime\Unstore\TDD\TDD_2022_01_08.cs
+    - Runtime\Unstore\TDD\TDD_2022_08_02.cs
+    - Runtime\Unstore\TDD\TDD_2022_08_03_FilePage.cs
+    - Runtime\Unstore\TDD\TDD_2022_08_03_WebPage.cs
+    - Runtime\Utility\RemoteAccessStringUtility.cs
+    - Runtime\Utility\RemoteAccessUtility.cs
+    - Scene\Demo.unity
     m_resultFileText: '.relativefilespointer
 
-      09.md
+      Runtime\Default\DownloadFilesPointerFromPath.cs
 
-      Az.md
+      Runtime\GitHub\Exp_DownloadFileGithub.cs
 
-      ReadMe.md
+      Runtime\GitHub\Interface\IClassicGitUrlInfoGet.cs
 
-      A
+      Runtime\GitHub\Interface\IHttpCloneGitUrlInfoGet.cs
 
-      A\B
+      Runtime\GitHub\Interface\IRawAccessGitUrlInfoGet.cs
+
+      Runtime\GitHub\Interface\IShhCloneGitUrlInfoGet.cs
+
+      Runtime\GitHub\Utility\GitHubRemoteUtility.cs
+
+      Runtime\Interface\IFetchFileFromRemoteIntoFolders.cs
+
+      Runtime\Interface\ISleepy.cs
+
+      Runtime\Interface\File
+      To Point At\IDirectoriesConstructorFile.cs
+
+      Runtime\Interface\File To
+      Point At\IRelativeFilePointers.cs
+
+      Runtime\Interface\File To Point At\IUrlFileDirectPointer.cs
+
+      Runtime\Interface\File
+      To Point At\IUrlRelativeFilePointers.cs
+
+      Runtime\Interface\Pointer\ISingleStringPointerHolder.cs
+
+      Runtime\Unstore\CreateFilesPointerMono.cs
+
+      Runtime\Unstore\DefaultFetchFileFromRemoteIntoFoldersMono.cs
+
+      Runtime\Unstore\Exp_DirectoriesConstructor.cs
+
+      Runtime\Unstore\Exp_Urlrelativefilepointers.cs
+
+      Runtime\Unstore\FetchFilesFromPointer_InHashIdFolder.cs
+
+      Runtime\Unstore\FetchFilesFromPointer_JustDownload.cs
+
+      Runtime\Unstore\RemotePathUtility.cs
+
+      Runtime\Unstore\Beans\IBean.cs
+
+      Runtime\Unstore\ManagerRemoteFileFetcherMono\DefaultRemoteFileFetcherMono.cs
+
+      Runtime\Unstore\ManagerRemoteFileFetcherMono\GitHubRemoteFileFetcherMono.cs
+
+      Runtime\Unstore\ManagerRemoteFileFetcherMono\LocalFileRemoteFileFetcherMono.cs
+
+      Runtime\Unstore\ManagerRemoteFileFetcherMono\ManagerRemoteFileFetcherMono.cs
+
+      Runtime\Unstore\TDD\TDD_2022_01_08.cs
+
+      Runtime\Unstore\TDD\TDD_2022_08_02.cs
+
+      Runtime\Unstore\TDD\TDD_2022_08_03_FilePage.cs
+
+      Runtime\Unstore\TDD\TDD_2022_08_03_WebPage.cs
+
+      Runtime\Utility\RemoteAccessStringUtility.cs
+
+      Runtime\Utility\RemoteAccessUtility.cs
+
+      Scene\Demo.unity
+
+      .git
+
+      Editor
+
+      Prefab
+
+      Runtime
+
+      Scene
+
+      Runtime\Default
+
+      Runtime\GitHub
+
+      Runtime\Interface
+
+      Runtime\Remote
+
+      Runtime\Unstore
+
+      Runtime\Utility
+
+      Runtime\GitHub\Interface
+
+      Runtime\GitHub\Public
+
+      Runtime\GitHub\Utility
+
+      Runtime\Interface\File
+      To Point At
+
+      Runtime\Interface\Pointer
+
+      Runtime\Remote\Google
+
+      Runtime\Remote\Google\Doc
+
+      Runtime\Remote\Google\Sheet
+
+      Runtime\Unstore\Beans
+
+      Runtime\Unstore\ManagerRemoteFileFetcherMono
+
+      Runtime\Unstore\TDD
 
 '
-    m_resultPathToCreate: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA/.relativefilespointer
+    m_resultPathToCreate: G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders/.relativefilespointer
     m_absoluteDirectory:
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\A
-    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\A\B
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\.git
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Editor
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Prefab
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Scene
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Default
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Remote
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Utility
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Interface
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Public
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\GitHub\Utility
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\File
+      To Point At
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Interface\Pointer
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Remote\Google
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Remote\Google\Doc
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Remote\Google\Sheet
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\Beans
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\ManagerRemoteFileFetcherMono
+    - G:\OMI\Q\OMI I Read Files\Assets\2022_07_30_IFetchFileFromRemoteIntoFolders\Runtime\Unstore\TDD
     m_relativeDirectory:
-    - A
-    - A\B
+    - .git
+    - Editor
+    - Prefab
+    - Runtime
+    - Scene
+    - Runtime\Default
+    - Runtime\GitHub
+    - Runtime\Interface
+    - Runtime\Remote
+    - Runtime\Unstore
+    - Runtime\Utility
+    - Runtime\GitHub\Interface
+    - Runtime\GitHub\Public
+    - Runtime\GitHub\Utility
+    - Runtime\Interface\File To Point At
+    - Runtime\Interface\Pointer
+    - Runtime\Remote\Google
+    - Runtime\Remote\Google\Doc
+    - Runtime\Remote\Google\Sheet
+    - Runtime\Unstore\Beans
+    - Runtime\Unstore\ManagerRemoteFileFetcherMono
+    - Runtime\Unstore\TDD
   m_ignoreFilter:
     m_cantHaveSegment:
-    - /.git/
+    - git/
     m_cantHaveEndFile:
     - .asmdef
     m_cantHaveStartFile:
-    - /Build/
+    - /build/
     m_cantHaveRegex:
     - README.md
 --- !u!4 &1174837681
@@ -669,6 +878,158 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2021403920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021403922}
+  - component: {fileID: 2021403925}
+  - component: {fileID: 2021403924}
+  - component: {fileID: 2021403923}
+  - component: {fileID: 2021403921}
+  m_Layer: 0
+  m_Name: DownloadAtstart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2021403921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021403920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e3ef33269345a47bca4f9f1cdc376c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_relativePath: Downloaded/TestField
+  m_pathWhatToDownload: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
+  m_deleteFolderWhenDownload: 1
+  m_downloadLog:
+    m_targetPointerPath: 
+    m_whereToStoreOnDisk: 
+    m_flushFolderOnDiskBeforeDownloading: 0
+    m_pointerUsed:
+      m_toUsePath: 
+      m_toUseRootPath: 
+    m_callback:
+      m_usedPath: 
+      m_textDownload: 
+      m_errorsThatHappened: []
+    m_pointerRecovered: 0
+    m_pointerAsTextRecovered: 
+    m_webRoot: 
+    m_localRoot: 
+    m_relativePathsInPointer: []
+    m_absolutePathsFromGivenRoot: []
+    m_absolutePathsStored: []
+  m_debugPathThatWillBeUsed: G:/OMI/Q/OMI I Read Files/Assets/Downloaded/TestField
+--- !u!4 &2021403922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021403920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2021403923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021403920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbfbda821d25504f943731e7dd91bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_relativePath: Downloaded/TestField
+  m_pathWhatToDownload: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
+  m_deleteFolderWhenDownload: 1
+  m_downloadLog:
+    m_targetPointerPath: 
+    m_whereToStoreOnDisk: 
+    m_flushFolderOnDiskBeforeDownloading: 0
+    m_pointerUsed:
+      m_toUsePath: 
+      m_toUseRootPath: 
+    m_callback:
+      m_usedPath: 
+      m_textDownload: 
+      m_errorsThatHappened: []
+    m_pointerRecovered: 0
+    m_pointerAsTextRecovered: 
+    m_webRoot: 
+    m_localRoot: 
+    m_relativePathsInPointer: []
+    m_absolutePathsFromGivenRoot: []
+    m_absolutePathsStored: []
+  m_debugPathThatWillBeUsed: G:/OMI/Q/OMI I Read Files/Assets/../Downloaded/TestField
+--- !u!114 &2021403924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021403920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6628dc31fad87f84abfc03879e9f3de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_relativePath: Downloaded/TestField
+  m_pathWhatToDownload: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField
+  m_deleteFolderWhenDownload: 1
+  m_downloadLog:
+    m_targetPointerPath: 
+    m_whereToStoreOnDisk: 
+    m_flushFolderOnDiskBeforeDownloading: 0
+    m_pointerUsed:
+      m_toUsePath: 
+      m_toUseRootPath: 
+    m_callback:
+      m_usedPath: 
+      m_textDownload: 
+      m_errorsThatHappened: []
+    m_pointerRecovered: 0
+    m_pointerAsTextRecovered: 
+    m_webRoot: 
+    m_localRoot: 
+    m_relativePathsInPointer: []
+    m_absolutePathsFromGivenRoot: []
+    m_absolutePathsStored: []
+  m_debugPathThatWillBeUsed: C:/Users/moi/AppData/LocalLow/DefaultCompany/Default
+    Copy Me/Downloaded/TestField
+--- !u!114 &2021403925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021403920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5e286b71fb4b34397d984f05935b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: 
+  m_directory: 
+  m_succedToDownload: 0
 --- !u!1001 &2261071344160927399
 PrefabInstance:
   m_ObjectHideFlags: 0
