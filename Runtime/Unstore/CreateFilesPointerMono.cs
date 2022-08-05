@@ -13,19 +13,81 @@ public class CreateFilesPointerMono : MonoBehaviour
     public string m_defaultFileName;
     public FilesPointerBuildLog m_buildLog;
     public FileIgnoreFilter m_ignoreFilter;
-    [ContextMenu("Refresh")]
-    public void Refresh() {
-        FilesPointerBuilderUtility.Create(in m_directoryPath, m_defaultFileName, in m_ignoreFilter, out m_buildLog);
-    }
+ 
 
     [ContextMenu("Set Load and switch to slash")]
     public void ToLowerAndSlash()
     {
         m_ignoreFilter.SetArrayToLowerAndReplaceBackSlash();
-       
     }
 
-    
+    [ContextMenu("Open URL")]
+    public void OpenUrl() {
+        Application.OpenURL(m_directoryPath);
+    }
+
+    [ContextMenu("Create Pointer")]
+    public void CreatePointer()
+    {
+        FilesPointerBuilderUtility.Create(in m_directoryPath, m_defaultFileName, in m_ignoreFilter, out m_buildLog);
+    }
+
+    public void SetDirectory(string directoryPath) {
+        m_directoryPath = directoryPath;
+    }
+    public void SetFileNameNoExtension(string fileName) {
+        m_defaultFileName = fileName;
+    }
+
+    public void SetCantHaveSegment(string text)
+    {
+        m_ignoreFilter.SetCantHaveSegment(text);
+
+    }
+
+    public void GetFileNameNoExtension(out string text)
+    {
+        text = m_defaultFileName;
+    }
+
+    public void GetCantHaveSegment(out string text)
+    {
+        text = string.Join("\n", m_ignoreFilter.m_cantHaveSegment);
+    }
+
+    public void GetCantEndBy(out string text)
+    {
+        text = string.Join("\n", m_ignoreFilter.m_cantHaveEndFile);
+    }
+
+    public void GetCantHaveRegex(out string text)
+    {
+        text = string.Join("\n", m_ignoreFilter.m_cantHaveRegex);
+    }
+
+    public void GetCantStartBy(out string text)
+    {
+        text = string.Join("\n", m_ignoreFilter.m_cantHaveStartFile);
+    }
+
+    public void GetDirectory(out string text)
+    {
+        text = m_directoryPath;
+    }
+
+    public void SetCantEndBy(string text)
+    {
+        m_ignoreFilter.SetCantEndBy(text);
+    }
+    public void SetCantStartBy(string text)
+    {
+        m_ignoreFilter.SetCantStartBy(text);
+    }
+    public void SetCantHaveRegex(string text)
+    {
+        m_ignoreFilter.SetCantHaveRegex(text);
+    }
+
 }
 public class FilesPointerBuilderUtility {
 
@@ -148,7 +210,7 @@ public class FilesPointerBuilderUtility {
                     continue;
                 }
             }
-            for (int j = 0; j < filter.m_cantHaveStartFile.Length; j++)
+            for (int j = 0; j < filter.m_cantHaveRegex.Length; j++)
             {
                 Regex r = new Regex(filter.m_cantHaveRegex[j]);
                 if (r.IsMatch(list[i]))
@@ -191,10 +253,35 @@ public class FileIgnoreFilter {
     public string[] m_cantHaveStartFile = new string[] { "/Build/" };
     public string[] m_cantHaveRegex = new string[] { ".[Jj][Pp][Ee]?[Gg]" };
 
-    internal void SetArrayToLowerAndReplaceBackSlash()
+    public void SetArrayToLowerAndReplaceBackSlash()
     {
         FilesPointerBuilderUtility.ReplaceSlashAndPutLow(ref m_cantHaveSegment);
         FilesPointerBuilderUtility.ReplaceSlashAndPutLow(ref m_cantHaveEndFile);
         FilesPointerBuilderUtility.ReplaceSlashAndPutLow(ref m_cantHaveStartFile);
+    }
+
+    public void SetCantHaveSegment(string text)
+    {
+        m_cantHaveSegment = text.Split('\n');
+        SetArrayToLowerAndReplaceBackSlash();
+
+    }
+    public void SetCantEndBy(string text)
+    {
+
+        m_cantHaveEndFile = text.Split('\n');
+        SetArrayToLowerAndReplaceBackSlash();
+    }
+    public void SetCantStartBy(string text)
+    {
+
+        m_cantHaveStartFile = text.Split('\n');
+        SetArrayToLowerAndReplaceBackSlash();
+    }
+    public void SetCantHaveRegex(string text)
+    {
+
+        m_cantHaveRegex = text.Split('\n');
+        SetArrayToLowerAndReplaceBackSlash();
     }
 }

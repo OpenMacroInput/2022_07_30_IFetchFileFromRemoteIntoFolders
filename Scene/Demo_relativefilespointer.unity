@@ -1954,6 +1954,8 @@ MonoBehaviour:
   m_filterCantHaveEndFile: {fileID: 601746958}
   m_filterCantHaveStartFile: {fileID: 735982396}
   m_filterCantHaveRegex: {fileID: 1101238727}
+  m_saveId: CreatePointer
+  m_usePlayerPrefs: 1
 --- !u!114 &1040808197
 MonoBehaviour:
   m_ObjectHideFlags: 0

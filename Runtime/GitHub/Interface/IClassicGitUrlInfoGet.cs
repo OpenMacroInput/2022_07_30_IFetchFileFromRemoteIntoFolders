@@ -36,12 +36,12 @@ public struct ClassicGitUrlInfo : IClassicGitUrlInfoGet
         //6+// /GithubPointer/
         //Last// DownloadMe.md
             m_gitUrl = gitUrl;
-        GitHubRemoteUtility.GetProjectNameFromPath(in            m_gitUrl, out m_project);
-        GitHubRemoteUtility.GetAccountFromPath(in            m_gitUrl, out m_account);
-        GitHubRemoteUtility.GetBranchFromPath(in            m_gitUrl, out m_branch);
-        GitHubRemoteUtility.GetTreetype(in            m_gitUrl, out m_treeType);
-        GitHubRemoteUtility.GetRelativePath(in            m_gitUrl, out m_relativePath);
-        GitHubRemoteUtility.GetFileFromPath(in            m_gitUrl, out m_fileExtension);
+        GitHubRemoteUtility.GetProjectNameFromPath(in m_gitUrl, out m_project);
+        GitHubRemoteUtility.GetAccountFromPath(in m_gitUrl, out m_account);
+        GitHubRemoteUtility.GetBranchFromPath(in m_gitUrl, out m_branch);
+        GitHubRemoteUtility.GetTreetype(in m_gitUrl, out m_treeType);
+        GitHubRemoteUtility.GetRelativePath(in m_gitUrl, out m_relativePath);
+        GitHubRemoteUtility.GetFileFromPath(in m_gitUrl, out m_fileExtension);
     }
 
     public void GetAccount(out string account)

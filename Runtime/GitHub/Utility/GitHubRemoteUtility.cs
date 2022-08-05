@@ -157,11 +157,15 @@ public class GitHubRemoteUtility
         }
         else if (GitHubRemoteUtility.IsPublicGitHubWebsite(in path))
         {
-
             ClassicGitUrlInfo m_classicGitUrl = new ClassicGitUrlInfo(path);
-            Debug.Log("N:" + path);
+            Debug.Log(string.Format("{0}--{1}--{2}--{3}--{4}--{5}",
+                m_classicGitUrl.m_account,
+                m_classicGitUrl.m_project,
+                m_classicGitUrl.m_fileExtension,
+                m_classicGitUrl.m_branch,
+                m_classicGitUrl.m_relativePath,
+                m_classicGitUrl.m_treeType));
             GitHubRemoteUtility.CreateRawGitLink(m_classicGitUrl, out rawPath);
-            Debug.Log("NN:" + rawPath);
         }
         else rawPath = "";
     }
@@ -192,13 +196,12 @@ public class GitHubRemoteUtility
     public static void CreateRawGitLink(in IClassicGitUrlInfoGet classicGitUrl, out string rawPath)
     {
         classicGitUrl.GetFullRelativePath(out string relativePath);
-        if (string.IsNullOrWhiteSpace(relativePath))
-        {
-            rawPath = "";
-            return;
-        }
-        classicGitUrl.GetUsedUrl(out string url);
-        Debug.Log("p:" + url);
+        //if (string.IsNullOrWhiteSpace(relativePath))
+        //{
+        //    rawPath = "";
+        //    return;
+        //}
+        //classicGitUrl.GetUsedUrl(out string url);
         classicGitUrl.GetAccount(out string acount);
         classicGitUrl.GetProjectName(out string project);
         classicGitUrl.GetBranch(out string branch);
@@ -214,9 +217,11 @@ public class GitHubRemoteUtility
         // https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/DownloadMe.md
         // https://raw.githubusercontent.com/0/1/2/3
         rawPath = string.Format("https://raw.githubusercontent.com/{0}/{1}/{2}/{3}",
-            account, project, branch, relativePath);
+            account, project, branch.Length>0?branch: "main", RemoteAccessStringUtility.RemoveSlashAtStart( relativePath));
 
-        Debug.Log("rp:" + rawPath);
+
+
+
     }
 
     public static void CreateCloneGitLink(in string path, out string raw)

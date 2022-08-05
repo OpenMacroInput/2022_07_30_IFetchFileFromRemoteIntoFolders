@@ -14,15 +14,14 @@ public class DownloadFilesPointerFromPathAndGithub : DownloadFilesPointerFromPat
     }
 
     public override void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
-    {
+    {   
         string newTarget = pointerPath;
-        Debug.Log("D:" + newTarget);
         if (GitHubRemoteUtility.IsGitHubRelated(in newTarget)) {
-            if (RemoteAccessStringUtility.IsDirectoryPath(in newTarget))
-                newTarget = RemoteAccessStringUtility.RemoveSlashAtEnd(pointerPath) + "/.relativefilespointer";
+            if (!RemoteAccessStringUtility.IsFilePath(in newTarget)) { 
+                newTarget = RemoteAccessStringUtility.RemoveSlashAtEnd(newTarget) + "/.relativefilespointer";
+            }
             GitHubRemoteUtility.GetRawGitPathFromGitLink(in newTarget, out newTarget);
         }
-        Debug.Log("i:" + newTarget);
         base.Set(newTarget, whereToStoreOnDiskPath, in deleteFolderBeforeDownload);
     }
 
@@ -47,6 +46,8 @@ public class DownloadFilesPointerFromPath
     public string[] m_relativePathsInPointer;
     public string[] m_absolutePathsFromGivenRoot;
     public string[] m_absolutePathsStored;
+    private bool m_hasLaunchDownload;
+    private bool m_hadLaunchDownload;
 
     public DownloadFilesPointerFromPath(in string targetPointerPath, in string whereToStoreOnDisk, in bool flushFolderOnDiskBeforeDownloading)
     {
@@ -60,7 +61,7 @@ public class DownloadFilesPointerFromPath
         m_whereToStoreOnDisk = whereToStoreOnDiskPath;
         m_flushFolderOnDiskBeforeDownloading = deleteFolderBeforeDownload;
     }
-    public bool HasDownloadSuccessfully() { return m_absolutePathsStored.Length > 0; }
+    public bool HasDownloadSuccessfully() { return m_hasLaunchDownload && m_hadLaunchDownload && !m_callback.HasError(); }
     public void Clear()
     {
 
@@ -73,12 +74,14 @@ public class DownloadFilesPointerFromPath
         m_relativePathsInPointer = new string[0]; ;
         m_absolutePathsFromGivenRoot = new string[0]; ;
         m_absolutePathsStored = new string[0];
+        m_hasLaunchDownload = false;
+        m_hadLaunchDownload = false;
     }
 
     public void ProcessToDownload()
     {
         Clear();
-        Debug.Log("K:" + m_targetPointerPath);
+        m_hasLaunchDownload = true;
         if (RemoteAccessStringUtility.IsDirectoryPath(in m_targetPointerPath)) {
             m_targetPointerPath = m_targetPointerPath + "/.relativefilespointer";
         }
@@ -139,10 +142,10 @@ public class DownloadFilesPointerFromPath
                     Directory.CreateDirectory(path);
                     }catch {
                     Debug.Log("Humm:" + path+":");
-                }
+                    }
             }
         }
-
+        m_hadLaunchDownload = true;
     }
 
     private void TryToDeleteAllFilesInDirectory(in string pathOfDirectoryToFlush)

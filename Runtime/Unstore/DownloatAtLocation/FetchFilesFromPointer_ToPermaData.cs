@@ -8,4 +8,8 @@ public class FetchFilesFromPointer_ToPermaData : AbstractRelativeFetchFilesFromP
     {
         return Application.persistentDataPath;
     }
+
+    protected override void DownloadNotification()
+    {
+    }
 }
