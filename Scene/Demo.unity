@@ -355,9 +355,27 @@ MonoBehaviour:
 
       ReadMe.md
 
+      A
+
+      A\B
+
 '
     m_resultPathToCreate: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA/.relativefilespointer
-  m_ignoreGit: 1
+    m_absoluteDirectory:
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\A
+    - C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\A\B
+    m_relativeDirectory:
+    - A
+    - A\B
+  m_ignoreFilter:
+    m_cantHaveSegment:
+    - /.git/
+    m_cantHaveEndFile:
+    - .asmdef
+    m_cantHaveStartFile:
+    - /Build/
+    m_cantHaveRegex:
+    - README.md
 --- !u!4 &1174837681
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb5e286b71fb4b34397d984f05935b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/.relativefilespointer
+  m_target: C:\Users\moi\Desktop\2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField\FilePointA\.relativefilespointer
   m_directory: G:\OMI\Q\OMI I Read Files\Assets\TestZone\DownloadFormJustDownload
   m_succedToDownload: 0
 --- !u!4 &1423182814

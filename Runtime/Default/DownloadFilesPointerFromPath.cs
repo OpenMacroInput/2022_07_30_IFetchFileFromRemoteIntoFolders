@@ -84,24 +84,36 @@ public class DownloadFilesPointerFromPath
         {
             if (string.IsNullOrWhiteSpace(m_relativePathsInPointer[i]))
                 continue;
-            fileDownlaod.SetPathUsed(m_webRoot + m_relativePathsInPointer[i]);
-            RemoteAccessUtility.DownloadFileAsText_CSharpClassic(
-                new SingleStringPointerHolderStruct(m_pointerUsed.m_toUsePath), fileDownlaod
-                );
+            if (RemoteAccessStringUtility.IsFilePath(in m_relativePathsInPointer[i])) { 
+                fileDownlaod.SetPathUsed(m_webRoot + m_relativePathsInPointer[i]);
+                RemoteAccessUtility.DownloadFileAsText_CSharpClassic(
+                    new SingleStringPointerHolderStruct(m_pointerUsed.m_toUsePath), fileDownlaod
+                    );
 
-            if (fileDownlaod.HasError())
-            {
+                if (fileDownlaod.HasError())
+                {  }
+                else
+                {
+                    fileDownlaod.GetTextDownloaded(out string downloaded);
+                    string path = m_localRoot + m_relativePathsInPointer[i];
+                    string dir = Path.GetDirectoryName(path);
+                    m_absolutePathsStored[i] = path;
+                    //try {
+                    Directory.CreateDirectory(dir);
+                    File.WriteAllText(path, downloaded);
+                    //}catch { }
+                }
             }
-            else
+            else if (RemoteAccessStringUtility.IsDirectoryPath(in m_relativePathsInPointer[i]))
             {
-                fileDownlaod.GetTextDownloaded(out string downloaded);
-                string path = m_localRoot + m_relativePathsInPointer[i];
-                string dir = Path.GetDirectoryName(path);
-                m_absolutePathsStored[i] = path;
-                //try {
-                Directory.CreateDirectory(dir);
-                File.WriteAllText(path, downloaded);
-                //}catch { }
+                    string path = m_localRoot + m_relativePathsInPointer[i];
+                    m_absolutePathsStored[i] = path;
+                    try {
+                    if(!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
+                    }catch {
+                    Debug.Log("Humm:" + path+":");
+                }
             }
         }
 
