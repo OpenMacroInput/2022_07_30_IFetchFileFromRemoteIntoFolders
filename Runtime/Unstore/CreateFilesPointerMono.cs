@@ -88,6 +88,8 @@ public class CreateFilesPointerMono : MonoBehaviour
         m_ignoreFilter.SetCantHaveRegex(text);
     }
 
+
+
 }
 public class FilesPointerBuilderUtility {
 

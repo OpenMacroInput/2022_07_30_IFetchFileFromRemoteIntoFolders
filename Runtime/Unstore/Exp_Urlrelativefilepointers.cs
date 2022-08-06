@@ -28,7 +28,7 @@ public class Exp_Urlrelativefilepointers : MonoBehaviour
 }
 
 
-public class Exp_UrlrelativefilepointersUtility
+public class WebRelativeFilesPointerUtility
 {
 
     //public static void CreateDirectories(in string absoluteDirectoryPath,in IAbstractFileFetcher fetcher, 

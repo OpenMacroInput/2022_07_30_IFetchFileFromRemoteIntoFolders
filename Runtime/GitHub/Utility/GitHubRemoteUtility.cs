@@ -165,7 +165,7 @@ public class GitHubRemoteUtility
                 m_classicGitUrl.m_branch,
                 m_classicGitUrl.m_relativePath,
                 m_classicGitUrl.m_treeType));
-            GitHubRemoteUtility.CreateRawGitLink(m_classicGitUrl, out rawPath);
+            GitHubRemoteUtility.CreateRawGitLinkFromClassic(m_classicGitUrl, out rawPath);
         }
         else rawPath = "";
     }
@@ -189,11 +189,11 @@ public class GitHubRemoteUtility
         rawPath = string.Format("https://github.com/{0}/{1}", account, project);
     }
 
-    public static void CreateRawGitLink(in string classicGitUrl, out string rawPath)
+    public static void CreateRawGitLinkFromClassic(in string classicGitUrl, out string rawPath)
     {
-        CreateRawGitLink(new ClassicGitUrlInfo(classicGitUrl), out rawPath);
+        CreateRawGitLinkFromClassic(new ClassicGitUrlInfo(classicGitUrl), out rawPath);
     }
-    public static void CreateRawGitLink(in IClassicGitUrlInfoGet classicGitUrl, out string rawPath)
+    public static void CreateRawGitLinkFromClassic(in IClassicGitUrlInfoGet classicGitUrl, out string rawPath)
     {
         classicGitUrl.GetFullRelativePath(out string relativePath);
         //if (string.IsNullOrWhiteSpace(relativePath))

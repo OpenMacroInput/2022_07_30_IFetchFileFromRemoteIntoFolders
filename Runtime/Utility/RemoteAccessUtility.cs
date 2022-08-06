@@ -137,4 +137,32 @@ public class RemoteAccessUtility
             callback(text, downloadSuccessfully);
     }
 
+    public static void TryToDeleteAllFilesInDirectory(in string whereToStoreOnDisk)
+    {
+        try
+        {
+            if (Directory.Exists(whereToStoreOnDisk))
+                Directory.Delete(whereToStoreOnDisk,true);
+        }
+        catch (Exception) { }
+        try
+        {
+            if (Directory.Exists(whereToStoreOnDisk))
+            {
+                string[] files = Directory.GetFiles(whereToStoreOnDisk);
+                for (int i = 0; i < files.Length; i++)
+                {
+                    File.Delete(files[i]);
+                }
+                string[] directories = Directory.GetDirectories(whereToStoreOnDisk);
+                for (int i = 0; i < directories.Length; i++)
+                {
+                    Directory.Delete(directories[i]);
+                }
+                Directory.Delete(whereToStoreOnDisk);
+            }
+        }
+        catch (Exception) { }
+        Directory.CreateDirectory(whereToStoreOnDisk);
+    }
 }

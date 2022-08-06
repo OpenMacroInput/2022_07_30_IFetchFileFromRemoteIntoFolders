@@ -261,6 +261,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bceeb12d79eadac49b4ace18bbe3e8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pointerPath: https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/GithubPointer/.webrelativefilespointer
+  m_whereToStoreDirectory: G:\OMI\Q\OMI I Read Files\Assets\Downloaded\TestA
+  m_deleteFolderToFlush: 0
+  m_test:
+    m_targetPointerPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/.webrelativefilespointer
+    m_whereToStoreOnDisk: G:\OMI\Q\OMI I Read Files\Assets\Downloaded\TestA
+    m_flushFolderOnDiskBeforeDownloading: 0
+    m_pointerUsed:
+      m_toUsePath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/.webrelativefilespointer
+      m_toUseRootPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer
+    m_callback:
+      m_usedPath: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/.webrelativefilespointer
+      m_textDownload: '// Must have a http(s):// to be valide.
+
+        // If ther
+        is not : before the http it is consider a copy the file to the root with
+        guest file named.
+
+        GitHub/DownloadMe_RawFile.md:https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/DownloadMe.md
+
+        GitHub/DownloadMe_Default.md:https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/new/main/GithubPointer/DownloadMe.md
+
+        https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/GithubPointer/LookAtMeGo.md
+
+'
+      m_errorsThatHappened: []
+    m_pointerRecovered: 1
+    m_pointerAsTextRecovered: '// Must have a http(s):// to be valide.
+
+      //
+      If ther is not : before the http it is consider a copy the file to the root
+      with guest file named.
+
+      GitHub/DownloadMe_RawFile.md:https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/DownloadMe.md
+
+      GitHub/DownloadMe_Default.md:https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/new/main/GithubPointer/DownloadMe.md
+
+      https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/GithubPointer/LookAtMeGo.md
+
+'
+    m_webRoot: https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/
+    m_localRoot: G:\OMI\Q\OMI I Read Files\Assets\Downloaded\TestA/
+    m_foundPointer:
+      m_items: []
+    m_linesInFile:
+    - // Must have a http(s):// to be valide.
+    - '// If ther is not : before the http it is consider a copy the file to the
+      root with guest file named.'
+    - GitHub/DownloadMe_RawFile.md:https://raw.githubusercontent.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/main/GithubPointer/DownloadMe.md
+    - GitHub/DownloadMe_Default.md:https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/new/main/GithubPointer/DownloadMe.md
+    - https://github.com/OpenMacroInput/2022_07_30_IFetchFileFromRemoteIntoFolders_TrainingField/blob/main/GithubPointer/LookAtMeGo.md
+    m_absolutePathsFromGivenRoot: []
+    m_absolutePathsStored: []
 --- !u!4 &899537303
 Transform:
   m_ObjectHideFlags: 0
@@ -353,6 +406,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1465636582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1465636584}
+  - component: {fileID: 1465636583}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1465636583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465636582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faa2ce3999e9304b889109a367852c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_rootwhereToCreate: 
+  m_downloaded: {fileID: 0}
+  m_text: 
+--- !u!4 &1465636584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465636582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 363.33386, y: 163.92126, z: 20.157593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883118367
 GameObject:

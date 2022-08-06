@@ -28,7 +28,7 @@ public class TDD_2022_08_02 : MonoBehaviour
     {
         m_infoRaw = new RawGitUrlInfo(m_pointerToGithubPointerUrl);
         m_infoClassic = new ClassicGitUrlInfo(m_pointerToGithubPointerUrl);
-        GitHubRemoteUtility.CreateRawGitLink(m_infoClassic, out m_githubPointerUrlRaw);
+        GitHubRemoteUtility.CreateRawGitLinkFromClassic(m_infoClassic, out m_githubPointerUrlRaw);
         m_pointerToGithubPointerUrlWebLink = new WebFilesPointer(m_githubPointerUrlRaw);
         RemoteAccessUtility.DownloadFileAsText_CSharpClassic(
             new SingleStringPointerHolderStruct(m_pointerToGithubPointerUrlWebLink.m_toUsePath), FetchRelativeInfo);

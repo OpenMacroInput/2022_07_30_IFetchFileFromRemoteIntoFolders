@@ -98,7 +98,7 @@ public class DownloadFilesPointerFromPath
         {
             if (m_flushFolderOnDiskBeforeDownloading)
             {
-                TryToDeleteAllFilesInDirectory(m_whereToStoreOnDisk);
+               RemoteAccessUtility.TryToDeleteAllFilesInDirectory(m_whereToStoreOnDisk);
             }
         }
 
@@ -148,32 +148,5 @@ public class DownloadFilesPointerFromPath
         m_hadLaunchDownload = true;
     }
 
-    private void TryToDeleteAllFilesInDirectory(in string pathOfDirectoryToFlush)
-    {
-        try
-        {
-            if (Directory.Exists(m_whereToStoreOnDisk))
-                Directory.Delete(m_whereToStoreOnDisk);
-        }
-        catch (Exception) { }
-        try
-        {
-            if (Directory.Exists(m_whereToStoreOnDisk))
-            {
-                string[] files = Directory.GetFiles(m_whereToStoreOnDisk);
-                for (int i = 0; i < files.Length; i++)
-                {
-                    File.Delete(files[i]);
-                }
-                string[] directories = Directory.GetDirectories(m_whereToStoreOnDisk);
-                for (int i = 0; i < directories.Length; i++)
-                {
-                    Directory.Delete(directories[i]);
-                }
-                Directory.Delete(m_whereToStoreOnDisk);
-            }
-        }
-        catch (Exception) { }
-        Directory.CreateDirectory(m_whereToStoreOnDisk);
-    }
+   
 }

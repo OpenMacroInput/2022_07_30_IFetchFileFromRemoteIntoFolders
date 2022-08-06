@@ -21,7 +21,7 @@ public class Exp_DownloadFileGithub : MonoBehaviour
     [ContextMenu("Refresh")]
     public void Refresh()
     {
-        GitHubRemoteUtility.CreateRawGitLink(in m_classicGitUrlTarget, out string raw);
+        GitHubRemoteUtility.CreateRawGitLinkFromClassic(in m_classicGitUrlTarget, out string raw);
         GitHubRemoteUtility.CreateCloneGitLink(in m_classicGitUrlTarget, out string rawClone);
         GitHubRemoteUtility.CreateSshGitLink(in m_classicGitUrlTarget, out string rawSSh);
         m_classicGitUrl = new ClassicGitUrlInfo(m_classicGitUrlTarget);

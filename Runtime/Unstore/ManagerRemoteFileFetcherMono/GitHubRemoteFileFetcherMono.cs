@@ -12,7 +12,7 @@ public class GitHubRemoteFileFetcherMono : AbstractRemoteFileFetcherMono
 
     public override void GetFileTextFromPath(in string path, out string text)
     {
-        GitHubRemoteUtility.CreateRawGitLink(in path, out string url);
+        GitHubRemoteUtility.CreateRawGitLinkFromClassic(in path, out string url);
         if (string.IsNullOrEmpty(url)) { 
             text = "";
             return;

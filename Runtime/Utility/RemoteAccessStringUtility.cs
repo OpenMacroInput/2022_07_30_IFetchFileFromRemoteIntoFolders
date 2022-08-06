@@ -66,4 +66,28 @@ public class RemoteAccessStringUtility
     {
         return text.IndexOf(startWith)==0;
     }
+
+    public static void GetLastSlashSegmentOfPath(in string path, out string extension)
+    {
+        int slahsIndex = path.LastIndexOf("\\");
+        if (slahsIndex < 0)
+        {
+            slahsIndex = path.LastIndexOf("/"); 
+            
+        }
+        if(slahsIndex < 0)
+        {
+            extension = ""; ; return;
+        }
+        if (slahsIndex==path.Length-1){ extension = "";  return; }
+
+        extension = path.Substring(slahsIndex+1);
+    }
+
+    public static string MergePathWithSlash(string startPaht, string toAdd)
+    {
+        return RemoveSlashAtEnd(startPaht) + "/" + RemoveSlashAtStart(toAdd);
+    }
+    public static string ReplaceWithAllSlash(string text) { return text.Replace("\\", "/"); }
+    public static string ReplaceWithAllBackSlash(string text) { return text.Replace("/", "\\"); }
 }
