@@ -49,6 +49,12 @@ public class RemoteAccessUtility
     {
         mono.StartCoroutine(DownloadFileAsText_Coroutine(source, callback));
     }
+
+    public static bool IsRelativeFilesPointerPath(in string path)
+    {
+        return RemoteAccessStringUtility.EndWith( path, ".relativefilespointer");
+    }
+
     public static IEnumerator DownloadFileAsText_Coroutine(ISingleStringPointerHolder source, RemoteCallback callback)
     {
         string text = "";
@@ -82,6 +88,12 @@ public class RemoteAccessUtility
 
 
     }
+
+    public static bool IsWebRelativeFilesPointerPath(in string path)
+    {
+        return RemoteAccessStringUtility.EndWith(path, ".webrelativefilespointer");
+    }
+
     public static void DownloadFileAsText_CSharpClassic(in ISingleStringPointerHolder source, in IFileDownloadCallbackSet callback)
     {
 
@@ -161,8 +173,9 @@ public class RemoteAccessUtility
                 }
                 Directory.Delete(whereToStoreOnDisk);
             }
+            if(!Directory.Exists(whereToStoreOnDisk))
+                Directory.CreateDirectory(whereToStoreOnDisk);
         }
         catch (Exception) { }
-        Directory.CreateDirectory(whereToStoreOnDisk);
     }
 }

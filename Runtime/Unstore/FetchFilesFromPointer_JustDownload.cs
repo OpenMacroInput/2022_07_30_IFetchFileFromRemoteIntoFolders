@@ -10,7 +10,7 @@ public class FetchFilesFromPointer_JustDownload : MonoBehaviour
 
     [ContextMenu("Fetch")]
     public void Fetch() {
-        FetchFileFromRemoteIntoFolders.I.FetchFileInFolder(in m_directory, in m_target, IFetchFileFromRemoteIntoFolders.FetchFileFlushManagement.JustDownload, out m_succedToDownload);
+        FetchFileFromRemoteIntoFolders.I.FetchPointerInFolder(in m_directory, in m_target, IFetchFileFromRemoteIntoFolders.FlushManagement.JustDownload, out m_succedToDownload);
 
     }
-}
+}   

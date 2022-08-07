@@ -14,7 +14,7 @@ public class FetchFilesFromPointer_InHashIdFolder : MonoBehaviour
     {
         long id = GenerateIdFrom(in m_target);
         string dir = RemoteAccessStringUtility.RemoveSlashAtEnd(m_directory) + "/" + id;
-        FetchFileFromRemoteIntoFolders.I.FetchFileInFolder(in dir, in m_target, IFetchFileFromRemoteIntoFolders.FetchFileFlushManagement.JustDownload, out m_succedToDownload);
+        FetchFileFromRemoteIntoFolders.I.FetchPointerInFolder(in dir, in m_target, IFetchFileFromRemoteIntoFolders.FlushManagement.JustDownload, out m_succedToDownload);
     }
 
     private long GenerateIdFrom(in string target)

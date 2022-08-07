@@ -20,7 +20,7 @@ public class TDD_2022_08_06 : MonoBehaviour
     public void Download()
     {
         m_pointer.Set(in m_pointerPath, in m_whereToStoreDirectory, in m_deleteFolderToFlush);
-        m_pointer.Download();
+        m_pointer.ProcessToDownload();
     }
 }
 
@@ -29,12 +29,13 @@ public class TDD_2022_08_06 : MonoBehaviour
 [System.Serializable]
 public class DownloadWebFilesPointerFromPathAndGithub : DownloadWebFilesPointerFromPath
 {
-    public DownloadWebFilesPointerFromPathAndGithub(in string targetPointerPath, in string whereToStoreOnDisk, in bool flushFolderOnDiskBeforeDownloading) : base(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading)
+    public DownloadWebFilesPointerFromPathAndGithub(in string targetPointerPath, in string whereToStoreOnDisk, in bool flushFolderOnDiskBeforeDownloading
+        , in IPathParserAuctioner parser = null) : base(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading, in parser)
     {
-        this.Set(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading);
+        this.Set(in targetPointerPath, in whereToStoreOnDisk, in flushFolderOnDiskBeforeDownloading, in parser);
     }
 
-    public override void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
+    public override void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload, in IPathParserAuctioner parser =null)
     {
         string newTarget = pointerPath;
         if (GitHubRemoteUtility.IsGitHubRelated(in newTarget))
@@ -45,7 +46,7 @@ public class DownloadWebFilesPointerFromPathAndGithub : DownloadWebFilesPointerF
             }
             GitHubRemoteUtility.GetRawGitPathFromGitLink(in newTarget, out newTarget);
         }
-        base.Set(newTarget, whereToStoreOnDiskPath, in deleteFolderBeforeDownload);
+        base.Set(newTarget, whereToStoreOnDiskPath, in deleteFolderBeforeDownload,in parser);
     }
 }
 
@@ -58,6 +59,7 @@ public class DownloadWebFilesPointerFromPath
     public string m_pointerPath;
     public string m_whereToStoreDirectory;
     public bool m_deleteFolderToFlush;
+    public IPathParserAuctioner m_parser;
     [Header("Debug")]
     public string m_usedPointerPath;
     public bool m_pointerRecovered;
@@ -67,32 +69,41 @@ public class DownloadWebFilesPointerFromPath
 
 
 
-    public DownloadWebFilesPointerFromPath(in string targetPointerPath, in string whereToStoreOnDisk, in bool flushFolderOnDiskBeforeDownloading)
+    public DownloadWebFilesPointerFromPath(in string targetPointerPath, in string whereToStoreOnDisk, 
+        in bool flushFolderOnDiskBeforeDownloading, in IPathParserAuctioner parser =null)
     {
         m_pointerPath = targetPointerPath;
         m_whereToStoreDirectory = whereToStoreOnDisk;
         m_deleteFolderToFlush = flushFolderOnDiskBeforeDownloading;
+        m_parser = parser;
     }
-    public virtual void Set(in string pointerPath, in string whereToStoreOnDiskPath, in bool deleteFolderBeforeDownload)
+    public virtual void Set(in string pointerPath, in string whereToStoreOnDiskPath, 
+        in bool deleteFolderBeforeDownload, in IPathParserAuctioner parser = null)
     {
         m_pointerPath = pointerPath;
         m_whereToStoreDirectory = whereToStoreOnDiskPath;
         m_deleteFolderToFlush = deleteFolderBeforeDownload;
+        m_parser = parser;
     }
 
-
+    public bool HasDownloadSuccessfully()
+    {
+        return m_hasLaunchDownload && m_hadLaunchDownload && !m_callback.HasError();
+    }
+    public bool m_hasLaunchDownload;
+    public bool m_hadLaunchDownload;
     [ContextMenu("Download")]
-    public void Download() {
+    public void ProcessToDownload() {
 
-        if(m_deleteFolderToFlush)
+        m_hasLaunchDownload = true;
+        m_hadLaunchDownload = false;
+        if (m_deleteFolderToFlush)
             RemoteAccessUtility.TryToDeleteAllFilesInDirectory(in m_whereToStoreDirectory);
 
         m_callback = new FileDownloadCallback();
         m_usedPointerPath = m_pointerPath;
-        if (GitHubRemoteUtility.IsGitHubRelated(in m_pointerPath))
-        {
-            GitHubRemoteUtility.GetRawGitPathFromGitLink(in m_pointerPath, out m_usedPointerPath);
-        }
+        if (m_parser != null)
+            m_parser.ConvertPath(m_pointerPath, out m_usedPointerPath);
 
         RemoteAccessUtility.DownloadFileAsText_CSharpClassic(
             new SingleStringPointerHolderStruct(m_usedPointerPath), m_callback);
@@ -109,7 +120,8 @@ public class DownloadWebFilesPointerFromPath
 
         WebRelativeFilePointerUtility.GetItemsWithText(in m_recoverPointer, out m_items);
         WebRelativeFilePointerGitHubUtility.ConvertToRawGitIfLinkedToGit(in m_items);
-        WebRelativeFilePointerUtility.Download(in m_whereToStoreDirectory, in m_items);
+        WebRelativeFilePointerUtility.Download(in m_whereToStoreDirectory, in m_items, in m_parser);
+        m_hadLaunchDownload = true;
     }
 }
 
@@ -135,6 +147,7 @@ public class WebRelativeFilePointerGitHubUtility {
         }
     }
 }
+
 public class WebRelativeFilePointerUtility
 {
     public static void GetItemsWithText(in string text, out List<WebRelativeFilePointerItem> items)
@@ -165,15 +178,17 @@ public class WebRelativeFilePointerUtility
         }
     }
 
-    public static void Download(in string storageDirectory, in List<WebRelativeFilePointerItem> items)
+    public static void Download(in string storageDirectory, in List<WebRelativeFilePointerItem> items, in IPathParserAuctioner parser=null)
     {
         foreach (WebRelativeFilePointerItem item in items)
         {
-            Download(in storageDirectory, in item);
+            Download(in storageDirectory, in item, parser);
         }
     }
-    public static void Download(in string storageDirectory, in WebRelativeFilePointerItem item)
+    public static void Download(in string storageDirectory, in WebRelativeFilePointerItem item, in IPathParserAuctioner parser=null)
     {
+        if (parser != null)
+            parser.ConvertPath(item.m_webUrlWhereToDownload, out item.m_webUrlWhereToDownload);
        
         if (storageDirectory == null || storageDirectory.Length <= 0
             || item == null || item.m_webUrlWhereToDownload == null || item.m_webUrlWhereToDownload.Length <= 0) {
@@ -333,7 +348,10 @@ public class DownloadWebRelativeFilesPointerFromPath
         m_whereToStoreOnDisk = whereToStoreOnDiskPath;
         m_flushFolderOnDiskBeforeDownloading = deleteFolderBeforeDownload;
     }
-    public bool HasDownloadSuccessfully() { return m_hasLaunchDownload && m_hadLaunchDownload && !m_callback.HasError(); }
+
+    public bool HasDownloadSuccessfull() {
+        return m_hasLaunchDownload && m_hadLaunchDownload && !m_callback.HasError(); 
+    }
     public void Clear()
     {
 
